@@ -1,0 +1,95 @@
+/*
+ * @file Developer CSS
+ * --------------------------------------------------------------------------------- */
+
+/* Highlight items that do not have attributes set
+ * --------------------------------------------------------------------------------- */
+
+/* Links */
+a[href="#"], a[href=""] {
+	outline: 1px dashed #e21a23;
+}
+
+/* Images */
+img[alt=""] {
+	outline: 1px dashed #e21a23;
+}
+
+
+/* Highlight widget areas
+ * --------------------------------------------------------------------------------- */
+.widget-area {
+	outline: 1px dashed #e21a23;
+}
+
+/*
+.widget-area:hover {
+	background-color: #ffffbd;
+}
+*/
+
+/* Display responsive information
+ * --------------------------------------------------------------------------------- */
+#wpadminbar ul li#wp-admin-bar-wfed {
+	background-color: #e21a23;
+}
+
+#wfed {
+	color: #fff;
+}
+
+#wfed-info {
+	position: relative;
+	padding: 0 24px 0 0;
+}
+
+#wfed-info:after {
+	content: "";
+	display: block;
+	height: 24px;
+	width: 24px;
+	position: absolute;
+	top: 4px;
+	right: -4px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 640px) {
+	#wfed-info:after {
+		background: transparent url('../img/mobile.png') no-repeat center right;
+		background-size: contain;
+	}
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+	#wfed-info:after {
+		background: transparent url('../img/tablet.png') no-repeat center right;
+		background-size: contain;
+	}
+}
+
+@media only screen and (min-width: 1025px) {
+	#wfed-info:after {
+		background: transparent url('../img/screen.png') no-repeat center right;
+		background-size: contain;
+	}
+}
+
+/* When the Admin Toolbar collapses at 782px */
+@media only screen and (max-width: 782px) {
+	#wfed {
+		padding: 0 6px;
+	}
+
+	#wfed-info:after {
+		top: 10px;
+	}
+
+	#wfed * {
+		height: 46px;
+		line-height: 46px;
+	}
+
+	#wpadminbar ul li#wp-admin-bar-wfed {
+		display: block;
+	}
+}
